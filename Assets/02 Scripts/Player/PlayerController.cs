@@ -36,8 +36,8 @@ public class PlayerController : MonoBehaviour
 
     public void Moving()
     {
-        if (GameManager.instance.isAlive == false)
-            return;
+        //if (GameManager.instance.isAlive == false)
+        //    return;
 
         isGround = GroundCheck();
 
@@ -145,11 +145,11 @@ public class PlayerController : MonoBehaviour
 
     public void Death()
     {
-        GameManager.instance.isAlive = false;
+        //GameManager.instance.isAlive = false;
         animController.playerState = AnimControll_base.STATE.DEATH;
         SoundManager.Instant.PlaySound("death");
 
-        GameManager.instance.RestartLevel();
+        GameManager.Instant.RestartLevel();
    
     }
 

@@ -13,7 +13,7 @@ public class CheckPoint : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            GameManager.lastCheckPointPos = transform.position;
+            //GameManager.lastCheckPointPos = transform.position;
             anim.SetTrigger("OUT");
 
           

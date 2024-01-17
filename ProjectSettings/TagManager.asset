@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - Collectable
   - Traps
+  - Enemy
+  - WeakPoint
   layers:
   - Default
   - TransparentFX
@@ -15,10 +17,10 @@ TagManager:
   - Water
   - UI
   - Obstacle
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - Collectable
+  - Sensor
   - 
   - 
   - 
@@ -56,6 +58,12 @@ TagManager:
   - name: Terrain
     uniqueID: 1122058729
     locked: 0
+  - name: Enemy
+    uniqueID: 2983534673
+    locked: 0
   - name: Player
     uniqueID: 3058832731
+    locked: 0
+  - name: UI
+    uniqueID: 2120559017
     locked: 0

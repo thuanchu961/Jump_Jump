@@ -8,8 +8,8 @@ public class PlatformMovement : MonoBehaviour
     [SerializeField] private float speed = 2f;
 
     private int currentWaypointIndex = 0;
-    
 
+    private Transform oldParent;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,10 +34,15 @@ public class PlatformMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        collision.transform.SetParent(transform);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            oldParent = collision.gameObject.transform.parent;
+            collision.transform.SetParent(transform);
+        }
+        
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        collision.transform.SetParent(null);
+        collision.transform.SetParent(oldParent);
     }
 }
